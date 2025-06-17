@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) 저장소 체크아웃
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2) Python 3.11 설치
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # 3) 시스템 의존성 설치
+      - name: Install liblouis & dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y liblouis-bin  # lou_translate CLI
+        # macOS, Windows의 경우 actions/runner 제공 이미지에는 brew/choco로 설치할 수도 있습니다.
+
+      # 4) 가상환경 생성 및 패키지 설치
+      - name: Install Python dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 5) 테이블 동기화 스크립트 실행
+      - name: Import all liblouis tables
+        run: |
+          chmod +x scripts/import_all_tables.sh
+          scripts/import_all_tables.sh
+
+      # 6) 테스트 실행
+      - name: Run tests
+        run: |
+          source .venv/bin/activate
+          pytest --maxfail=1 --disable-warnings -q
+
+      # 7) (선택) 테스트 로그 아티팩트로 업로드
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-logs
+          path: tests/logs/test_results.log

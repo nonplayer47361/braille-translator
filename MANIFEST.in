@@ -1,0 +1,27 @@
+# File: MANIFEST.in
+
+# ── 메타/문서 파일 ─────────────────────────────────────────────────────────────
+include README.md
+include LICENSE*
+include pyproject.toml
+include requirements.txt
+include Dockerfile
+
+# ── CI/CD 설정 파일 ───────────────────────────────────────────────────────────
+recursive-include .github/workflows *.yml
+
+# ── 패키지 Python 코드 ────────────────────────────────────────────────────────
+recursive-include braille_translator *.py
+recursive-include braille_translator/__init__.py
+
+# ── 테이블 데이터 ─────────────────────────────────────────────────────────────
+recursive-include braille_translator/tables *.ctb *.dis *.yaml *.yml
+
+# ── 이미지/샘플 데이터 ────────────────────────────────────────────────────────
+recursive-include braille_translator/data *
+
+# ── 스크립트 ─────────────────────────────────────────────────────────────────
+recursive-include scripts *.sh
+
+# ── CLI 엔트리포인트 ──────────────────────────────────────────────────────────
+include main.py

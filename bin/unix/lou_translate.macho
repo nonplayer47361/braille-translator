@@ -1,0 +1,2 @@
+$ file bin/macos/lou_translate.macho
+bin/macos/lou_translate.macho: Mach-O 64-bit executable x86_64

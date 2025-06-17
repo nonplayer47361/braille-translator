@@ -1,0 +1,10 @@
+# core
+six>=1.17.0
+hgtk>=0.2.1
+numpy>=1.23.0
+
+# image processing (optional)
+opencv-python>=4.5.0
+
+# testing
+pytest>=8.0.0

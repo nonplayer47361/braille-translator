@@ -1,0 +1,43 @@
+# File: braille_translator/pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "braille-translator"
+version = "0.1.0"
+description = "Text ↔ Braille translator and reconstructor using liblouis; supports English, Korean, numbers, symbols, and image I/O."
+readme = "README.md"
+license = { text = "LGPL-2.1-or-later" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+  "numpy",
+  "opencv-python",
+  "hgtk",
+  "six",
+]
+
+[project.optional-dependencies]
+testing = ["pytest"]
+
+[tool.setuptools]
+# find all packages under this directory
+packages = ["find:"]
+
+# include non-.py files under package directories
+include-package-data = true
+
+[tool.setuptools.package-data]
+# include ALL table files and bin scripts
+"braille_translator" = [
+  "tables/**/*",          # 모든 .ctb/.dis 등 테이블
+  "bin/**/*",             # macos/linux/windows용 실행 스크립트/바이너리
+]
+
+[tool.setuptools.exclude-package-data]
+# tests 폴더는 배포에 포함하지 않음
+"*" = ["tests/*"]

@@ -1,0 +1,3 @@
+[submodule "liblouis-src"]
+	path = liblouis-src
+	url = https://github.com/liblouis/liblouis.git

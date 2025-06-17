@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "braille-translator"
+version = "0.1.0"
+description = "텍스트↔점자 변환 및 복원 라이브러리"
+readme = "README.md"
+requires-python = ">=3.8"
+
+# 프로젝트가 의존하는 패키지들
+dependencies = [
+  "liblouis-bin",    # 시스템에 lou_translate 설치용 (brew/apt)
+  "numpy",
+  "opencv-python",
+  "hgtk",
+  "six",
+]
+
+[tool.setuptools.packages.find]
+where = ["braille_translator"]
+
+[tool.setuptools.include-package-data]
+include = true

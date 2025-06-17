@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: louis
+Version: 3.34.0
+Summary: Python bindings for liblouis
+Download-URL: https://github.com/liblouis/liblouis
+License: LGPLv2.1+
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing :: Linguistic
+Dynamic: classifier
+Dynamic: download-url
+Dynamic: license
+Dynamic: summary
