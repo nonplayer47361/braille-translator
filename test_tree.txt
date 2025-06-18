@@ -1,0 +1,1860 @@
+.
+├── __pycache__
+│   └── test.cpython-313.pyc
+├── bin
+│   ├── unix
+│   │   ├── lou_translate
+│   │   ├── lou_translate.macho
+│   │   └── lou_translate.sh
+│   └── windows
+│       └── lou_translate.bat
+├── braille_translator
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── translator_v2.cpython-311.pyc
+│   │   ├── translator_v5.cpython-311.pyc
+│   │   └── translator.cpython-311.pyc
+│   ├── braille_translator.egg-info
+│   │   ├── dependency_links.txt
+│   │   ├── PKG-INFO
+│   │   ├── requires.txt
+│   │   ├── SOURCES.txt
+│   │   └── top_level.txt
+│   ├── config.json
+│   ├── pyproject.toml
+│   ├── translator_v1.py
+│   ├── translator_v2.py
+│   ├── translator_v5.py
+│   └── translator.egg-info
+│       ├── dependency_links.txt
+│       ├── PKG-INFO
+│       ├── SOURCES.txt
+│       └── top_level.txt
+├── Dockerfile
+├── examples
+│   └── example_usage.py
+├── liblouis-src
+│   ├── aclocal.m4
+│   ├── ANNOUNCEMENT
+│   ├── AUTHORS
+│   ├── autogen.sh
+│   ├── autom4te.cache
+│   │   ├── output.0
+│   │   ├── output.1
+│   │   ├── output.2
+│   │   ├── requests
+│   │   ├── traces.0
+│   │   ├── traces.1
+│   │   └── traces.2
+│   ├── build-aux
+│   │   ├── ar-lib
+│   │   ├── compile
+│   │   ├── config.guess
+│   │   ├── config.sub
+│   │   ├── depcomp
+│   │   ├── install-sh
+│   │   ├── link-warning.h
+│   │   ├── ltmain.sh
+│   │   ├── mdate-sh
+│   │   ├── missing
+│   │   ├── test-driver
+│   │   └── texinfo.tex
+│   ├── ChangeLog
+│   ├── config.log
+│   ├── config.status
+│   ├── configure
+│   ├── configure.ac
+│   ├── contrib
+│   │   ├── ascii-braille.el
+│   │   └── braille-input.el
+│   ├── COPYING
+│   ├── COPYING.LESSER
+│   ├── doc
+│   │   ├── liblouis.texi
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── Dockerfile
+│   ├── Dockerfile.win32
+│   ├── Dockerfile.win64
+│   ├── Doxyfile
+│   ├── extra
+│   │   └── generate-display-names
+│   │       ├── display-names
+│   │       ├── displayLanguage.go
+│   │       ├── generate.c
+│   │       ├── go.mod
+│   │       ├── go.sum
+│   │       └── Makefile
+│   ├── gnulib
+│   │   ├── _Noreturn.h
+│   │   ├── alloca.h
+│   │   ├── alloca.in.h
+│   │   ├── arg-nonnull.h
+│   │   ├── assert.h
+│   │   ├── assert.in.h
+│   │   ├── c++defs.h
+│   │   ├── dirent.h
+│   │   ├── dirent.in.h
+│   │   ├── free.c
+│   │   ├── idx.h
+│   │   ├── intprops-internal.h
+│   │   ├── inttypes.h
+│   │   ├── inttypes.in.h
+│   │   ├── libgnu_la-free.lo
+│   │   ├── libgnu_la-free.o
+│   │   ├── libgnu_la-malloca.lo
+│   │   ├── libgnu_la-malloca.o
+│   │   ├── libgnu_la-unistd.lo
+│   │   ├── libgnu_la-unistd.o
+│   │   ├── libgnu.la
+│   │   ├── limits.h
+│   │   ├── limits.in.h
+│   │   ├── m4
+│   │   │   ├── 00gnulib.m4
+│   │   │   ├── absolute-header.m4
+│   │   │   ├── alloca.m4
+│   │   │   ├── assert_h.m4
+│   │   │   ├── c-bool.m4
+│   │   │   ├── codeset.m4
+│   │   │   ├── dirent_h.m4
+│   │   │   ├── eealloc.m4
+│   │   │   ├── environ.m4
+│   │   │   ├── extensions.m4
+│   │   │   ├── extern-inline.m4
+│   │   │   ├── free.m4
+│   │   │   ├── gnulib-cache.m4
+│   │   │   ├── gnulib-common.m4
+│   │   │   ├── gnulib-comp.m4
+│   │   │   ├── gnulib-tool.m4
+│   │   │   ├── include_next.m4
+│   │   │   ├── inttypes.m4
+│   │   │   ├── ld-output-def.m4
+│   │   │   ├── limits-h.m4
+│   │   │   ├── locale-fr.m4
+│   │   │   ├── malloc.m4
+│   │   │   ├── malloca.m4
+│   │   │   ├── multiarch.m4
+│   │   │   ├── off_t.m4
+│   │   │   ├── off64_t.m4
+│   │   │   ├── pid_t.m4
+│   │   │   ├── realloc.m4
+│   │   │   ├── setenv.m4
+│   │   │   ├── ssize_t.m4
+│   │   │   ├── std-gnu11.m4
+│   │   │   ├── stddef_h.m4
+│   │   │   ├── stdint.m4
+│   │   │   ├── stdlib_h.m4
+│   │   │   ├── strcase.m4
+│   │   │   ├── string_h.m4
+│   │   │   ├── strings_h.m4
+│   │   │   ├── strndup.m4
+│   │   │   ├── strnlen.m4
+│   │   │   ├── sys_types_h.m4
+│   │   │   ├── unistd_h.m4
+│   │   │   ├── warn-on-use.m4
+│   │   │   ├── wchar_h.m4
+│   │   │   ├── wint_t.m4
+│   │   │   └── zzgnulib.m4
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── malloc.c
+│   │   ├── malloca.c
+│   │   ├── malloca.h
+│   │   ├── realloc.c
+│   │   ├── setenv.c
+│   │   ├── stdckdint.in.h
+│   │   ├── stddef.h
+│   │   ├── stddef.in.h
+│   │   ├── stdint.h
+│   │   ├── stdint.in.h
+│   │   ├── stdlib.h
+│   │   ├── stdlib.in.h
+│   │   ├── strcasecmp.c
+│   │   ├── string.h
+│   │   ├── string.in.h
+│   │   ├── strings.h
+│   │   ├── strings.in.h
+│   │   ├── strncasecmp.c
+│   │   ├── strndup.c
+│   │   ├── strnlen.c
+│   │   ├── sys
+│   │   │   └── types.h
+│   │   ├── sys_types.in.h
+│   │   ├── unistd.c
+│   │   ├── unistd.h
+│   │   ├── unistd.in.h
+│   │   ├── verify.h
+│   │   ├── warn-on-use.h
+│   │   ├── wchar.h
+│   │   ├── wchar.in.h
+│   │   └── xalloc-oversized.h
+│   ├── HACKING
+│   ├── INSTALL
+│   ├── liblouis
+│   │   ├── commonTranslationFunctions.c
+│   │   ├── commonTranslationFunctions.lo
+│   │   ├── commonTranslationFunctions.o
+│   │   ├── compileTranslationTable.c
+│   │   ├── compileTranslationTable.lo
+│   │   ├── compileTranslationTable.o
+│   │   ├── config.h
+│   │   ├── config.h.in
+│   │   ├── internal.h
+│   │   ├── liblouis.h
+│   │   ├── liblouis.h.in
+│   │   ├── liblouis.la
+│   │   ├── logging.c
+│   │   ├── logging.lo
+│   │   ├── logging.o
+│   │   ├── lou_backTranslateString.c
+│   │   ├── lou_backTranslateString.lo
+│   │   ├── lou_backTranslateString.o
+│   │   ├── lou_translateString.c
+│   │   ├── lou_translateString.lo
+│   │   ├── lou_translateString.o
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── maketable.c
+│   │   ├── maketable.lo
+│   │   ├── maketable.o
+│   │   ├── metadata.c
+│   │   ├── metadata.lo
+│   │   ├── metadata.o
+│   │   ├── pattern.c
+│   │   ├── pattern.lo
+│   │   ├── pattern.o
+│   │   ├── stamp-h1
+│   │   ├── utils.c
+│   │   ├── utils.lo
+│   │   └── utils.o
+│   ├── liblouis.pc
+│   ├── liblouis.pc.in
+│   ├── libtool
+│   ├── libyaml_mingw.patch
+│   ├── License.md
+│   ├── m4
+│   │   ├── libtool.m4
+│   │   ├── lt~obsolete.m4
+│   │   ├── ltoptions.m4
+│   │   ├── ltsugar.m4
+│   │   └── ltversion.m4
+│   ├── Makefile
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── man
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── NEWS
+│   ├── python
+│   │   ├── build
+│   │   │   ├── bdist.macosx-15.0-arm64
+│   │   │   └── lib
+│   │   │       └── louis
+│   │   │           └── __init__.py
+│   │   ├── examples
+│   │   │   ├── dtbook2brldtbook.xsl
+│   │   │   ├── liblouisxslt.py
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   └── translate-html.py
+│   │   ├── louis
+│   │   │   ├── __init__.py
+│   │   │   ├── __init__.py.in
+│   │   │   ├── __pycache__
+│   │   │   │   └── __init__.cpython-311.pyc
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   └── Makefile.in
+│   │   ├── louis.egg-info
+│   │   │   ├── dependency_links.txt
+│   │   │   ├── PKG-INFO
+│   │   │   ├── SOURCES.txt
+│   │   │   └── top_level.txt
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README.md
+│   │   ├── setup.py
+│   │   ├── setup.py.in
+│   │   └── tests
+│   │       ├── __pycache__
+│   │       │   └── test_louis.cpython-311-pytest-8.4.0.pyc
+│   │       ├── Makefile
+│   │       ├── Makefile.am
+│   │       ├── Makefile.in
+│   │       ├── test_louis.py
+│   │       └── test.cti
+│   ├── README
+│   ├── README.org -> README
+│   ├── README.windows
+│   ├── SECURITY.md
+│   ├── tables
+│   │   ├── afr-za-g1.ctb
+│   │   ├── afr-za-g2.ctb
+│   │   ├── akk-borger.utb
+│   │   ├── akk.utb
+│   │   ├── ancient-languages-borger.utb
+│   │   ├── ancient-languages-us.utb
+│   │   ├── ar-ar-comp8.utb
+│   │   ├── ar-ar-g1-core.uti
+│   │   ├── ar-ar-g1.utb
+│   │   ├── ar-ar-g2.ctb
+│   │   ├── ar-ar-math.uti
+│   │   ├── ar.tbl
+│   │   ├── as-in-g1.utb
+│   │   ├── as.tbl
+│   │   ├── aw-in-g1.utb
+│   │   ├── awa.tbl
+│   │   ├── ba.utb
+│   │   ├── be-in-g1.utb
+│   │   ├── bel-comp.utb
+│   │   ├── bel-detailed.utb
+│   │   ├── bel.utb
+│   │   ├── bengali.cti
+│   │   ├── bg.ctb
+│   │   ├── bg.dis
+│   │   ├── bg.tbl
+│   │   ├── bg.utb
+│   │   ├── bh.ctb
+│   │   ├── bh.tbl
+│   │   ├── bn.tbl
+│   │   ├── bo.ctb
+│   │   ├── bo.tbl
+│   │   ├── boxes.ctb
+│   │   ├── br-in-g1.utb
+│   │   ├── bra.tbl
+│   │   ├── braille-patterns.cti
+│   │   ├── ca-chardefs.cti
+│   │   ├── ca-g1.ctb
+│   │   ├── ca.tbl
+│   │   ├── chr-us-g1.ctb
+│   │   ├── ckb-chardefs.cti
+│   │   ├── ckb-g1.ctb
+│   │   ├── ckb-translation.cti
+│   │   ├── ckb.tbl
+│   │   ├── compress.cti
+│   │   ├── controlchars.cti
+│   │   ├── cop-eg-comp8.utb
+│   │   ├── cop.utb
+│   │   ├── corrections.cti
+│   │   ├── countries.cti
+│   │   ├── critical-apparatus.uti
+│   │   ├── cs-chardefs.cti
+│   │   ├── cs-comp8.utb
+│   │   ├── cs-g1.ctb
+│   │   ├── cs-translation.cti
+│   │   ├── cs.tbl
+│   │   ├── cuneiform-transliterated-compact.utb
+│   │   ├── cuneiform-transliterated.utb
+│   │   ├── cy-cy-g1.utb
+│   │   ├── cy-cy-g2.ctb
+│   │   ├── cy.tbl
+│   │   ├── da-dk-6miscChars_1993.cti
+│   │   ├── da-dk-6miscChars.cti
+│   │   ├── da-dk-8miscChars_1993.cti
+│   │   ├── da-dk-8miscChars.cti
+│   │   ├── da-dk-g08_1993.ctb
+│   │   ├── da-dk-g08.ctb
+│   │   ├── da-dk-g16_1993.ctb
+│   │   ├── da-dk-g16-lit_1993.ctb
+│   │   ├── da-dk-g16.ctb
+│   │   ├── da-dk-g18_1993.ctb
+│   │   ├── da-dk-g18.ctb
+│   │   ├── da-dk-g2.dic
+│   │   ├── da-dk-g26_1993.ctb
+│   │   ├── da-dk-g26-lit_1993.ctb
+│   │   ├── da-dk-g26.ctb
+│   │   ├── da-dk-g26l_1993.ctb
+│   │   ├── da-dk-g26l-lit_1993.ctb
+│   │   ├── da-dk-g28_1993.ctb
+│   │   ├── da-dk-g28.ctb
+│   │   ├── da-dk-g28l_1993.ctb
+│   │   ├── da-dk-octobraille_1993.dis
+│   │   ├── da-dk-octobraille.dis
+│   │   ├── de-accents-detailed.cti
+│   │   ├── de-accents.cti
+│   │   ├── de-chardefs6.cti
+│   │   ├── de-chardefs8.cti
+│   │   ├── de-chess.ctb
+│   │   ├── de-comp6.utb
+│   │   ├── de-de-comp8.ctb
+│   │   ├── de-de.dis
+│   │   ├── de-eurobrl6.dis
+│   │   ├── de-eurobrl6u.dis
+│   │   ├── de-g0-core.uti
+│   │   ├── de-g0-detailed.utb
+│   │   ├── de-g0.utb
+│   │   ├── de-g1-core-patterns.dic
+│   │   ├── de-g1-core.cti
+│   │   ├── de-g1-detailed.ctb
+│   │   ├── de-g1.ctb
+│   │   ├── de-g2-core-patterns.dic
+│   │   ├── de-g2-core.cti
+│   │   ├── de-g2-detailed.ctb
+│   │   ├── de-g2.ctb
+│   │   ├── devanagari.cti
+│   │   ├── digits6Dots.uti
+│   │   ├── digits6DotsPlusDot6.uti
+│   │   ├── digits8Dots.uti
+│   │   ├── dra.ctb
+│   │   ├── dra.tbl
+│   │   ├── el.ctb
+│   │   ├── en_CA.ctb
+│   │   ├── en_CA.tbl
+│   │   ├── en_GB.tbl
+│   │   ├── en_US-comp8-ext.tbl
+│   │   ├── en_US.tbl
+│   │   ├── en-chardefs.cti
+│   │   ├── en-chess.ctb
+│   │   ├── en-gb-comp8.ctb
+│   │   ├── en-gb-g1.utb
+│   │   ├── en-GB-g2.ctb
+│   │   ├── en-in-g1.ctb
+│   │   ├── en-nabcc.utb
+│   │   ├── en-ueb-chardefs.uti
+│   │   ├── en-ueb-g1.ctb
+│   │   ├── en-ueb-g2.ctb
+│   │   ├── en-ueb-math.ctb
+│   │   ├── en-us-brf.dis
+│   │   ├── en-us-comp6.ctb
+│   │   ├── en-us-comp8-ext.utb
+│   │   ├── en-us-comp8.ctb
+│   │   ├── en-us-compbrl.uti
+│   │   ├── en-us-emphasis.uti
+│   │   ├── en-us-g1.ctb
+│   │   ├── en-us-g2.ctb
+│   │   ├── en-us-interline.ctb
+│   │   ├── en-us-mathtext.ctb
+│   │   ├── eo-g1-x-system.ctb
+│   │   ├── eo-g1.ctb
+│   │   ├── eo.tbl
+│   │   ├── es-chardefs.cti
+│   │   ├── Es-Es-G0.utb
+│   │   ├── es-g1.ctb
+│   │   ├── es-g2.ctb
+│   │   ├── es-new.dis
+│   │   ├── es-old.dis
+│   │   ├── es.tbl
+│   │   ├── et-g0.utb
+│   │   ├── et.ctb
+│   │   ├── et.tbl
+│   │   ├── ethio-g1.ctb
+│   │   ├── eurodefs.cti
+│   │   ├── fa-ir-comp8.ctb
+│   │   ├── fa-ir-g1.utb
+│   │   ├── fi-fi-8dot.ctb
+│   │   ├── fi.utb
+│   │   ├── fil-g2.ctb
+│   │   ├── fr-bfu-comp6.utb
+│   │   ├── fr-bfu-comp68.cti
+│   │   ├── fr-bfu-comp8.utb
+│   │   ├── fr-bfu-g2.ctb
+│   │   ├── ga-g1.utb
+│   │   ├── ga-g2.ctb
+│   │   ├── gd.ctb
+│   │   ├── gd.tbl
+│   │   ├── gez.tbl
+│   │   ├── gon.ctb
+│   │   ├── gon.tbl
+│   │   ├── gr-pl-comp8.uti
+│   │   ├── grc-international-common.uti
+│   │   ├── grc-international-composed.uti
+│   │   ├── grc-international-decomposed.uti
+│   │   ├── grc-international-en-composed.utb
+│   │   ├── grc-international-en.utb
+│   │   ├── grc-international-es.utb
+│   │   ├── gu-in-g1.utb
+│   │   ├── gu.tbl
+│   │   ├── gujarati.cti
+│   │   ├── gurumuki.cti
+│   │   ├── haw-us-g1.ctb
+│   │   ├── hbo-cantillated-rules.uti
+│   │   ├── hbo-cantillated.utb
+│   │   ├── hbo-common-rules.uti
+│   │   ├── hbo-ihbc-rules.uti
+│   │   ├── hbo-slim-rules.uti
+│   │   ├── hbo-slim.utb
+│   │   ├── hbo.utb
+│   │   ├── he-common-consonants.uti
+│   │   ├── he-common-vowels-ihbc.uti
+│   │   ├── he-IL-comp8.utb
+│   │   ├── he-IL.utb
+│   │   ├── hi-in-g1.utb
+│   │   ├── hi.tbl
+│   │   ├── hr-chardefs.cti
+│   │   ├── hr-comp8.tbl
+│   │   ├── hr-comp8.utb
+│   │   ├── hr-digits.uti
+│   │   ├── hr-g1.ctb
+│   │   ├── hr-g1.tbl
+│   │   ├── hr-translation.cti
+│   │   ├── hu-backtranslate-correction.dis
+│   │   ├── hu-backtranslate-word-corrections.cti
+│   │   ├── hu-chardefs.cti
+│   │   ├── hu-exceptionwords.cti
+│   │   ├── hu-hu-comp8.ctb
+│   │   ├── hu-hu-g1_braille_input.cti
+│   │   ├── hu-hu-g1.ctb
+│   │   ├── hu-hu-g2_exceptions.cti
+│   │   ├── hu-hu-g2.ctb
+│   │   ├── hu.tbl
+│   │   ├── hy.ctb
+│   │   ├── hy.tbl
+│   │   ├── hyph_cs_CZ.dic
+│   │   ├── hyph_da_DK.dic
+│   │   ├── hyph_de_DE.dic
+│   │   ├── hyph_en_US.dic
+│   │   ├── hyph_eo.dic
+│   │   ├── hyph_es_ES.dic
+│   │   ├── hyph_fr_FR.dic
+│   │   ├── hyph_hu_HU.dic
+│   │   ├── hyph_it_IT.dic
+│   │   ├── hyph_nb_NO.dic
+│   │   ├── hyph_nl_NL.dic
+│   │   ├── hyph_nn_NO.dic
+│   │   ├── hyph_pl_PL.dic
+│   │   ├── hyph_pt_PT.dic
+│   │   ├── hyph_ru.dic
+│   │   ├── hyph_sv_SE.dic
+│   │   ├── IPA-unicode-range.uti
+│   │   ├── IPA.utb
+│   │   ├── is-chardefs6.cti
+│   │   ├── is-chardefs8.cti
+│   │   ├── is.ctb
+│   │   ├── is.tbl
+│   │   ├── it-it-comp6.utb
+│   │   ├── it-it-comp8.utb
+│   │   ├── it.tbl
+│   │   ├── iu-ca-g1.ctb
+│   │   ├── ja-kantenji-ucs2.utb
+│   │   ├── ja-kantenji.utb
+│   │   ├── ka-in-g1.utb
+│   │   ├── ka.utb
+│   │   ├── kannada.cti
+│   │   ├── kh-in-g1.utb
+│   │   ├── kha.tbl
+│   │   ├── kk.utb
+│   │   ├── km-g1.utb
+│   │   ├── kmr.tbl
+│   │   ├── kn.tbl
+│   │   ├── ko-2006-g1.ctb
+│   │   ├── ko-2006-g2.ctb
+│   │   ├── ko-2006.cti
+│   │   ├── ko-chars.cti
+│   │   ├── ko-g1-rules.cti
+│   │   ├── ko-g1.ctb
+│   │   ├── ko-g2-rules.cti
+│   │   ├── ko-g2.ctb
+│   │   ├── ko.cti
+│   │   ├── kok.ctb
+│   │   ├── kok.tbl
+│   │   ├── kru.ctb
+│   │   ├── kru.tbl
+│   │   ├── ks-in-g1.utb
+│   │   ├── latinLetterDef6Dots.uti
+│   │   ├── latinLetterDef8Dots.uti
+│   │   ├── latinLowercase.uti
+│   │   ├── latinUppercaseComp6.uti
+│   │   ├── lg-ug-g1.utb
+│   │   ├── litdigits6Dots.uti
+│   │   ├── litdigits6DotsPlusDot6.uti
+│   │   ├── lo-g1.utb
+│   │   ├── loweredDigits6Dots.uti
+│   │   ├── loweredDigits8Dots.uti
+│   │   ├── lt-6dot.utb
+│   │   ├── lt-8dot.utb
+│   │   ├── lt.ctb
+│   │   ├── Lv-Lv-g1.utb
+│   │   ├── lv.tbl
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── maketablelist.sh
+│   │   ├── malayalam.cti
+│   │   ├── mao-nz-g1.ctb
+│   │   ├── marburg_single_cell_defs.cti
+│   │   ├── marburg_unicode_defs.cti
+│   │   ├── ml-in-g1.utb
+│   │   ├── ml.tbl
+│   │   ├── mn-in-g1.utb
+│   │   ├── mn-MN-common.cti
+│   │   ├── mn-MN-g1.utb
+│   │   ├── mn-MN-g2.ctb
+│   │   ├── mni.tbl
+│   │   ├── mr-in-g1.utb
+│   │   ├── mr.tbl
+│   │   ├── ms-my-g2.ctb
+│   │   ├── mt.ctb
+│   │   ├── mt.tbl
+│   │   ├── mun.ctb
+│   │   ├── mun.tbl
+│   │   ├── mwr.ctb
+│   │   ├── mwr.tbl
+│   │   ├── my-g1.utb
+│   │   ├── my-g2.ctb
+│   │   ├── ne.ctb
+│   │   ├── ne.tbl
+│   │   ├── nemethdefs.cti
+│   │   ├── nl-BE.dis
+│   │   ├── nl-chardefs.uti
+│   │   ├── nl-chardefs.uti.in
+│   │   ├── nl-comp8.utb
+│   │   ├── nl-NL-g0.utb
+│   │   ├── nl-NL-g0.utb.in
+│   │   ├── nl-print.dis
+│   │   ├── nl-unicode.dis
+│   │   ├── no-no-8dot-fallback-6dot-g0.utb
+│   │   ├── no-no-8dot.utb
+│   │   ├── no-no-braillo-047-01.dis
+│   │   ├── no-no-chardefs6.uti
+│   │   ├── no-no-comp8.ctb
+│   │   ├── no-no-cyrillic6dot.uti
+│   │   ├── no-no-g0.utb
+│   │   ├── no-no-g1.ctb
+│   │   ├── no-no-g2.ctb
+│   │   ├── no-no-g3.ctb
+│   │   ├── no-no-generic.ctb
+│   │   ├── no-no-generic.dis
+│   │   ├── no-no-latinLetterDef6Dots_diacritics.uti
+│   │   ├── no-no.dis
+│   │   ├── np-in-g1.utb
+│   │   ├── nso-za-g1.utb
+│   │   ├── nso-za-g2.ctb
+│   │   ├── ny-mw.utb
+│   │   ├── or-in-g1.utb
+│   │   ├── or.tbl
+│   │   ├── oriya.cti
+│   │   ├── pa.tbl
+│   │   ├── pi.ctb
+│   │   ├── pi.tbl
+│   │   ├── pl-pl-comp8.ctb
+│   │   ├── Pl-Pl-g1.utb
+│   │   ├── pl.tbl
+│   │   ├── printables.cti
+│   │   ├── pt-comp6.utb
+│   │   ├── pt-pt-comp8.ctb
+│   │   ├── pt-pt-g1.utb
+│   │   ├── pt-pt-g2.ctb
+│   │   ├── pt.tbl
+│   │   ├── pu-in-g1.utb
+│   │   ├── quotation-marks.uti
+│   │   ├── README
+│   │   ├── ro-g0.utb
+│   │   ├── ro.ctb
+│   │   ├── ro.tbl
+│   │   ├── ru-brf.dis
+│   │   ├── ru-comp6.utb
+│   │   ├── ru-comp8.utb
+│   │   ├── ru-letters.dis
+│   │   ├── ru-litbrl-detailed.utb
+│   │   ├── ru-litbrl.ctb
+│   │   ├── ru-ru-g1.ctb
+│   │   ├── ru-unicode.dis
+│   │   ├── rw-rw-g1.utb
+│   │   ├── sa-in-g1.utb
+│   │   ├── sa.tbl
+│   │   ├── sah.utb
+│   │   ├── sd.tbl
+│   │   ├── se-se.ctb
+│   │   ├── se-se.dis
+│   │   ├── si-in-g1.utb
+│   │   ├── sin.cti
+│   │   ├── sin.utb
+│   │   ├── sk-g1.ctb
+│   │   ├── sk-sk-g1.utb
+│   │   ├── sk-sk.utb
+│   │   ├── sl-si-comp8.ctb
+│   │   ├── sl-si-g1.utb
+│   │   ├── sl.tbl
+│   │   ├── sot-za-g1.ctb
+│   │   ├── sot-za-g2.ctb
+│   │   ├── spaces.uti
+│   │   ├── sr-common.cti
+│   │   ├── sr-Cyrl.ctb
+│   │   ├── sr-cyrletters.cti
+│   │   ├── sr-g1.ctb
+│   │   ├── sr-latletters.cti
+│   │   ├── sv-1989.ctb
+│   │   ├── sv-1996.ctb
+│   │   ├── sv-g0.utb
+│   │   ├── sv-g1.ctb
+│   │   ├── sv-g2.ctb
+│   │   ├── sw-ke-g1-2.ctb
+│   │   ├── sw-ke-g1-3.ctb
+│   │   ├── sw-ke-g1-4.ctb
+│   │   ├── sw-ke-g1-5.ctb
+│   │   ├── sw-ke-g1.utb
+│   │   ├── sw-ke-g2.ctb
+│   │   ├── syc.utb
+│   │   ├── ta-ta-g1.ctb
+│   │   ├── ta.ctb
+│   │   ├── ta.tbl
+│   │   ├── tamil.cti
+│   │   ├── te-in-g1.utb
+│   │   ├── te.tbl
+│   │   ├── telugu.cti
+│   │   ├── text_nabcc.dis
+│   │   ├── th-comp8-backward.utb
+│   │   ├── th-g0.utb
+│   │   ├── th-g1.utb
+│   │   ├── th-g1.uti
+│   │   ├── th-g2.ctb
+│   │   ├── tr-g1.ctb
+│   │   ├── tr-g2.ctb
+│   │   ├── tr-g2.tbl
+│   │   ├── tr.ctb
+│   │   ├── tr.tbl
+│   │   ├── tsn-za-g1.ctb
+│   │   ├── tsn-za-g2.ctb
+│   │   ├── tt.utb
+│   │   ├── uga.utb
+│   │   ├── uk-comp.utb
+│   │   ├── uk-detailed.utb
+│   │   ├── uk.utb
+│   │   ├── ukchardefs.cti
+│   │   ├── ukmaths_single_cell_defs.cti
+│   │   ├── ukmaths_unicode_defs.cti
+│   │   ├── uni-text.dis
+│   │   ├── unicode-braille.utb
+│   │   ├── unicode-without-blank.dis
+│   │   ├── unicode.dis
+│   │   ├── ur-pk-g1.utb
+│   │   ├── ur-pk-g2.ctb
+│   │   ├── us-table.dis
+│   │   ├── uz-g1.utb
+│   │   ├── ve-za-g1.utb
+│   │   ├── ve-za-g2.ctb
+│   │   ├── vi-cb8.utb
+│   │   ├── vi-charsdef.uti
+│   │   ├── vi-lettersdef.uti
+│   │   ├── vi-puncsdef.uti
+│   │   ├── vi-saigon-g1.ctb
+│   │   ├── vi-vn-g0.utb
+│   │   ├── vi-vn-g1.ctb
+│   │   ├── vi-vn-g2.ctb
+│   │   ├── wiskunde-chardefs.cti
+│   │   ├── wordcx.dis
+│   │   ├── xh-za-g1.utb
+│   │   ├── xh-za-g2.ctb
+│   │   ├── yi.utb
+│   │   ├── zh_CHN.tbl
+│   │   ├── zh-chn.ctb
+│   │   ├── zh-hk.ctb
+│   │   ├── zh-tw.ctb
+│   │   ├── zhcn-cbs.ctb
+│   │   ├── zhcn-g1.ctb
+│   │   ├── zhcn-g2.ctb
+│   │   ├── zu-za-g1.utb
+│   │   └── zu-za-g2.ctb
+│   ├── tests
+│   │   ├── attributeNames.c
+│   │   ├── braille-specs
+│   │   │   ├── afr-za-g2.yaml
+│   │   │   ├── akk-borger.yaml
+│   │   │   ├── akk.yaml
+│   │   │   ├── ar-ar-comp8.yaml
+│   │   │   ├── ar-ar-g1_harness.yaml
+│   │   │   ├── ar-ar-g1.yaml
+│   │   │   ├── ar-ar-g2.yaml
+│   │   │   ├── arabic.grade2.issue.yaml
+│   │   │   ├── ba.yaml
+│   │   │   ├── bel.yaml
+│   │   │   ├── bg.yaml
+│   │   │   ├── bn.yaml
+│   │   │   ├── chr-us-g1_harness.yaml
+│   │   │   ├── cop.yaml
+│   │   │   ├── critical-apparatus.yaml
+│   │   │   ├── cs_harness.yaml
+│   │   │   ├── cs-comp8_harness.yaml
+│   │   │   ├── cuneiform-transliterated.yaml
+│   │   │   ├── da-dk_1993.yaml
+│   │   │   ├── da-dk-6dot.yaml
+│   │   │   ├── da-dk-8dot.yaml
+│   │   │   ├── da-dk-g26-dictionary_harness_1993.yaml
+│   │   │   ├── da-dk-g26-dictionary_harness.yaml
+│   │   │   ├── da-dk-g28-dictionary_harness_1993.yaml
+│   │   │   ├── da-dk-g28-dictionary_harness.yaml
+│   │   │   ├── de-blista-dictionary.yaml
+│   │   │   ├── de-comp6.yaml
+│   │   │   ├── de-de-comp8.yaml
+│   │   │   ├── de-eurobrl6.yaml
+│   │   │   ├── de-g0-detailed-dictionary.yaml
+│   │   │   ├── de-g0-detailed-specs.yaml
+│   │   │   ├── de-g0.yaml
+│   │   │   ├── de-g1-detailed-dictionary.yaml
+│   │   │   ├── de-g1-detailed-specs.yaml
+│   │   │   ├── de-g1-dictionary.yaml
+│   │   │   ├── de-g1.yaml
+│   │   │   ├── de-g2-detailed-specs.yaml
+│   │   │   ├── de-g2-dictionary.yaml
+│   │   │   ├── de-g2-sbs.yaml
+│   │   │   ├── de-g2.yaml
+│   │   │   ├── el-backward.yaml
+│   │   │   ├── el-forward.yaml
+│   │   │   ├── en-gb-g1_harness.yaml
+│   │   │   ├── en-GB-g2.yaml
+│   │   │   ├── en-nabcc.yaml
+│   │   │   ├── en-ueb-computer-code.yaml
+│   │   │   ├── en-ueb-g1_backward.yaml
+│   │   │   ├── en-ueb-g1_harness.yaml
+│   │   │   ├── en-ueb-g2_backward_no_dis.yaml
+│   │   │   ├── en-ueb-g2_backward.yaml
+│   │   │   ├── en-ueb-g2-dictionary_harness.yaml
+│   │   │   ├── en-ueb-math.yaml
+│   │   │   ├── en-ueb-symbols_harness.yaml
+│   │   │   ├── en-ueb.yaml
+│   │   │   ├── en-us-comp6.yaml
+│   │   │   ├── en-us-comp8-ext-back_harness.yaml
+│   │   │   ├── en-us-comp8-ext-for_harness.yaml
+│   │   │   ├── en-us-emphasis_harness.yaml
+│   │   │   ├── en-us-g1.yaml
+│   │   │   ├── en-us-g2-dictionary_harness.yaml
+│   │   │   ├── en-us-g2.yaml
+│   │   │   ├── eo-g1_harness.yaml
+│   │   │   ├── es-g0-g1.yaml
+│   │   │   ├── es-g2.yaml
+│   │   │   ├── ethio-g1_harness.yaml
+│   │   │   ├── fa-ir-comp8-harness.yaml
+│   │   │   ├── fa-ir-g1-harness.yaml
+│   │   │   ├── fi_harness.yaml
+│   │   │   ├── fil.yaml
+│   │   │   ├── fr-bfu-comp6.yaml
+│   │   │   ├── fr-bfu-comp8.yaml
+│   │   │   ├── fr-bfu-g2_harness.yaml
+│   │   │   ├── fr-bfu-g2.yaml
+│   │   │   ├── ga-g1_harness.yaml
+│   │   │   ├── ga-g2_harness.yaml
+│   │   │   ├── grc-international-common.yaml
+│   │   │   ├── grc-international-composed.yaml
+│   │   │   ├── grc-international-decomposed.yaml
+│   │   │   ├── grc-international-es.yaml
+│   │   │   ├── hbo.yaml
+│   │   │   ├── he-IL.yaml
+│   │   │   ├── hi_harness.yaml
+│   │   │   ├── hr-8dots_harness.yaml
+│   │   │   ├── hu-hu-comp8_harness.yaml
+│   │   │   ├── hu-hu-g1_braille_input_backward.yaml
+│   │   │   ├── hu-hu-g1_braille_input_forward.yaml
+│   │   │   ├── hu-hu-g1_dictionary_numbers.yaml
+│   │   │   ├── hu-hu-g1_dictionary_special_consonants.yaml
+│   │   │   ├── hu-hu-g1_harness.yaml
+│   │   │   ├── hu-hu-g1-hyph_harness.yaml
+│   │   │   ├── hu-hu-g2_dictionary_numbers.yaml
+│   │   │   ├── hu-hu-g2_harness.yaml
+│   │   │   ├── ipa.yaml
+│   │   │   ├── it.yaml
+│   │   │   ├── iu-ca-g1_harness.yaml
+│   │   │   ├── ja-kantenji.yaml
+│   │   │   ├── ka.yaml
+│   │   │   ├── kk.yaml
+│   │   │   ├── kmr.yaml
+│   │   │   ├── kn.yaml
+│   │   │   ├── ko-2006-g2_harness.yaml
+│   │   │   ├── ko-g2_harness.yaml
+│   │   │   ├── lg-ug-g1.yaml
+│   │   │   ├── litdigits6Dots_backward.yaml
+│   │   │   ├── lo.yaml
+│   │   │   ├── lt.yaml
+│   │   │   ├── lv_harness.yaml
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── ml.yaml
+│   │   │   ├── mn-MN_harness.yaml
+│   │   │   ├── ms-my-g2.yaml
+│   │   │   ├── my-g2.yaml
+│   │   │   ├── nemeth.yaml
+│   │   │   ├── nl-comp8_harness.yaml
+│   │   │   ├── nl-g0_harness.yaml
+│   │   │   ├── no_8dot_harness.yaml
+│   │   │   ├── no.yaml
+│   │   │   ├── ny-mw.yaml
+│   │   │   ├── pa.yaml
+│   │   │   ├── pl-g1.yaml
+│   │   │   ├── pl-pl-comp8_harness.yaml
+│   │   │   ├── pt.yaml
+│   │   │   ├── ro-g0.yaml
+│   │   │   ├── ru.yaml
+│   │   │   ├── rw-rw-g1.yaml
+│   │   │   ├── sah.yaml
+│   │   │   ├── sk-g1_harness.yaml
+│   │   │   ├── sl-g1.yaml
+│   │   │   ├── spaces.yaml
+│   │   │   ├── sr.yaml
+│   │   │   ├── st-g2.yaml
+│   │   │   ├── sv.yaml
+│   │   │   ├── sw-ke-dictionary.yaml
+│   │   │   ├── sw-ke.yaml
+│   │   │   ├── syc.yaml
+│   │   │   ├── ta-ta-g1_harness.yaml
+│   │   │   ├── th.yaml
+│   │   │   ├── tr.yaml
+│   │   │   ├── tt.yaml
+│   │   │   ├── uga.yaml
+│   │   │   ├── uk.yaml
+│   │   │   ├── ur-pk-g2.yaml
+│   │   │   ├── uz.yaml
+│   │   │   ├── ve-g2.yaml
+│   │   │   ├── vi.yaml
+│   │   │   ├── xh-g2.yaml
+│   │   │   ├── yi.yaml
+│   │   │   ├── zh-chn.yaml
+│   │   │   ├── zh-tw-dictionary.yaml
+│   │   │   ├── zh-tw.yaml
+│   │   │   ├── zhcn-cbs.yaml
+│   │   │   ├── zhcn-g1.yaml
+│   │   │   └── zhcn-g2.yaml
+│   │   ├── charToFallbackDots.c
+│   │   ├── check_all_tables.pl
+│   │   ├── check_endless_loop.pl
+│   │   ├── check_included_tables.sh
+│   │   ├── check_metadata.c
+│   │   ├── checkTable.c
+│   │   ├── default_table.h
+│   │   ├── emphclass.c
+│   │   ├── findTable.c
+│   │   ├── fuzzing
+│   │   │   ├── build-corpus.py
+│   │   │   ├── build.sh
+│   │   │   ├── fuzz_backtranslate.c
+│   │   │   ├── fuzz_translate_generic.c
+│   │   │   ├── fuzz_translate_generic.dict
+│   │   │   ├── fuzz_translate.c
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── minimize-corpus.sh
+│   │   │   ├── README.md
+│   │   │   └── table_fuzzer.cc
+│   │   ├── getTable.c
+│   │   ├── hash_collision.c
+│   │   ├── hyphenate_xxx.c
+│   │   ├── logging.c
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── multiple_table_path.pl
+│   │   ├── resolve_table.c
+│   │   ├── resolve_table.h
+│   │   ├── resolve_table.h.in
+│   │   ├── suggestChunks.c
+│   │   ├── tables
+│   │   │   ├── attribute
+│   │   │   │   ├── attributeName_invalid.utb
+│   │   │   │   ├── attributeName_valid.utb
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── bad.ctb
+│   │   │   ├── context-ignored.utb
+│   │   │   ├── emphclass
+│   │   │   │   ├── emphclass_invalid_1.utb
+│   │   │   │   ├── emphclass_invalid_2.utb
+│   │   │   │   ├── emphclass_valid.utb
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── empty.ctb
+│   │   │   ├── large.ctb
+│   │   │   ├── loop.ctb
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── moreTables
+│   │   │   │   ├── include.utb
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── non-letters-as-caps.utb
+│   │   │   ├── old-caps-opcodes-1.utb
+│   │   │   ├── old-caps-opcodes-2.utb
+│   │   │   ├── pass2.ctb
+│   │   │   ├── resolve_table
+│   │   │   │   ├── dir_1
+│   │   │   │   │   ├── dir_1.1
+│   │   │   │   │   │   ├── Makefile
+│   │   │   │   │   │   ├── Makefile.am
+│   │   │   │   │   │   ├── Makefile.in
+│   │   │   │   │   │   └── table_1.1.1
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.am
+│   │   │   │   │   ├── Makefile.in
+│   │   │   │   │   ├── table_1.1
+│   │   │   │   │   ├── table_1.2
+│   │   │   │   │   └── table_1.3
+│   │   │   │   ├── dir_2
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.am
+│   │   │   │   │   ├── Makefile.in
+│   │   │   │   │   ├── table_2.1
+│   │   │   │   │   └── table_2.2
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.am
+│   │   │   │   ├── Makefile.in
+│   │   │   │   ├── table_1
+│   │   │   │   ├── table_2
+│   │   │   │   ├── table_3
+│   │   │   │   ├── table_4
+│   │   │   │   ├── table_5
+│   │   │   │   └── table_6
+│   │   │   ├── squash_space_with_context_1.utb
+│   │   │   └── suggestChunks.ctb
+│   │   ├── tablesWithMetadata
+│   │   │   ├── bar
+│   │   │   ├── foo
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   └── Makefile.in
+│   │   ├── typeform_for_emphclass.c
+│   │   ├── typeform.c
+│   │   ├── yaml
+│   │   │   ├── attribute.yaml
+│   │   │   ├── back_cont_then_punc.yaml
+│   │   │   ├── before_begmidword.yaml
+│   │   │   ├── begcaps_endcaps.yaml
+│   │   │   ├── broken_equals_operand.yaml
+│   │   │   ├── capitalization.yaml
+│   │   │   ├── capsnocont.yaml
+│   │   │   ├── capsword.yaml
+│   │   │   ├── case-sensitivity.yaml
+│   │   │   ├── compbrlAtCursor_with_equals.yaml
+│   │   │   ├── computer_braille.yaml
+│   │   │   ├── emphasis.yaml
+│   │   │   ├── example_test.yaml
+│   │   │   ├── face-with-tears-of-joy-ucs4.yaml
+│   │   │   ├── face-with-tears-of-joy.yaml
+│   │   │   ├── hyphenation_nocross_harness.yaml
+│   │   │   ├── hyphenation.dic
+│   │   │   ├── hyphenation.yaml
+│   │   │   ├── inpos_outpos.yaml
+│   │   │   ├── input-length.yaml
+│   │   │   ├── issue-332_hyph.dic
+│   │   │   ├── issue-332.yaml
+│   │   │   ├── issue-479.yaml
+│   │   │   ├── issue-615.yaml
+│   │   │   ├── issue-963.yaml
+│   │   │   ├── letterDefTest_harness.yaml
+│   │   │   ├── macro.utb
+│   │   │   ├── macro.yaml
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── match-vs-always.yaml
+│   │   │   ├── mixed-case.yaml
+│   │   │   ├── multipass-backward.yaml
+│   │   │   ├── multipass-forward.yaml
+│   │   │   ├── multipass-negation.yaml
+│   │   │   ├── multipass-vs-match_common.uti
+│   │   │   ├── multipass-vs-match.yaml
+│   │   │   ├── multipass.yaml
+│   │   │   ├── new_emph.yaml
+│   │   │   ├── noletsignafter.yaml
+│   │   │   ├── nonumsign.yaml
+│   │   │   ├── numericmode.yaml
+│   │   │   ├── partialTrans.yaml
+│   │   │   ├── pass0_typebuf.yaml
+│   │   │   ├── precedence.yaml
+│   │   │   ├── present_progressive.yaml
+│   │   │   ├── repword.yaml
+│   │   │   ├── squash_space.yaml
+│   │   │   ├── syllable.yaml
+│   │   │   ├── undefined.yaml
+│   │   │   └── various-regression-tests.yaml
+│   │   └── yaml-log-compiler.sh
+│   ├── TODO
+│   ├── tools
+│   │   ├── brl_checks.c
+│   │   ├── brl_checks.h
+│   │   ├── brl_checks.lo
+│   │   ├── brl_checks.o
+│   │   ├── gnulib
+│   │   │   ├── _Noreturn.h
+│   │   │   ├── alloca.h
+│   │   │   ├── alloca.in.h
+│   │   │   ├── arg-nonnull.h
+│   │   │   ├── assert.h
+│   │   │   ├── assert.in.h
+│   │   │   ├── attribute.h
+│   │   │   ├── basename-lgpl.c
+│   │   │   ├── basename-lgpl.h
+│   │   │   ├── c++defs.h
+│   │   │   ├── cloexec.c
+│   │   │   ├── cloexec.h
+│   │   │   ├── close.c
+│   │   │   ├── dup2.c
+│   │   │   ├── errno.in.h
+│   │   │   ├── error.c
+│   │   │   ├── error.h
+│   │   │   ├── error.in.h
+│   │   │   ├── fcntl.c
+│   │   │   ├── fcntl.h
+│   │   │   ├── fcntl.in.h
+│   │   │   ├── fd-hook.c
+│   │   │   ├── fd-hook.h
+│   │   │   ├── filename.h
+│   │   │   ├── free.c
+│   │   │   ├── fstat.c
+│   │   │   ├── getdtablesize.c
+│   │   │   ├── getopt_int.h
+│   │   │   ├── getopt-cdefs.h
+│   │   │   ├── getopt-cdefs.in.h
+│   │   │   ├── getopt-core.h
+│   │   │   ├── getopt-ext.h
+│   │   │   ├── getopt-pfx-core.h
+│   │   │   ├── getopt-pfx-ext.h
+│   │   │   ├── getopt.c
+│   │   │   ├── getopt.h
+│   │   │   ├── getopt.in.h
+│   │   │   ├── getopt1.c
+│   │   │   ├── getprogname.c
+│   │   │   ├── getprogname.h
+│   │   │   ├── gettext.h
+│   │   │   ├── idx.h
+│   │   │   ├── intprops-internal.h
+│   │   │   ├── intprops.h
+│   │   │   ├── inttypes.h
+│   │   │   ├── inttypes.in.h
+│   │   │   ├── libgnutools_la-basename-lgpl.lo
+│   │   │   ├── libgnutools_la-basename-lgpl.o
+│   │   │   ├── libgnutools_la-cloexec.lo
+│   │   │   ├── libgnutools_la-cloexec.o
+│   │   │   ├── libgnutools_la-error.lo
+│   │   │   ├── libgnutools_la-error.o
+│   │   │   ├── libgnutools_la-fd-hook.lo
+│   │   │   ├── libgnutools_la-fd-hook.o
+│   │   │   ├── libgnutools_la-free.lo
+│   │   │   ├── libgnutools_la-free.o
+│   │   │   ├── libgnutools_la-fstat.lo
+│   │   │   ├── libgnutools_la-fstat.o
+│   │   │   ├── libgnutools_la-getopt.lo
+│   │   │   ├── libgnutools_la-getopt.o
+│   │   │   ├── libgnutools_la-getopt1.lo
+│   │   │   ├── libgnutools_la-getopt1.o
+│   │   │   ├── libgnutools_la-malloca.lo
+│   │   │   ├── libgnutools_la-malloca.o
+│   │   │   ├── libgnutools_la-open.lo
+│   │   │   ├── libgnutools_la-open.o
+│   │   │   ├── libgnutools_la-progname.lo
+│   │   │   ├── libgnutools_la-progname.o
+│   │   │   ├── libgnutools_la-stat-time.lo
+│   │   │   ├── libgnutools_la-stat-time.o
+│   │   │   ├── libgnutools_la-stat.lo
+│   │   │   ├── libgnutools_la-stat.o
+│   │   │   ├── libgnutools_la-strerror-override.lo
+│   │   │   ├── libgnutools_la-strerror-override.o
+│   │   │   ├── libgnutools_la-strerror.lo
+│   │   │   ├── libgnutools_la-strerror.o
+│   │   │   ├── libgnutools_la-unistd.lo
+│   │   │   ├── libgnutools_la-unistd.o
+│   │   │   ├── libgnutools_la-version-etc.lo
+│   │   │   ├── libgnutools_la-version-etc.o
+│   │   │   ├── libgnutools.la
+│   │   │   ├── limits.h
+│   │   │   ├── limits.in.h
+│   │   │   ├── m4
+│   │   │   │   ├── 00gnulib.m4
+│   │   │   │   ├── absolute-header.m4
+│   │   │   │   ├── alloca.m4
+│   │   │   │   ├── assert_h.m4
+│   │   │   │   ├── c-bool.m4
+│   │   │   │   ├── close.m4
+│   │   │   │   ├── codeset.m4
+│   │   │   │   ├── double-slash-root.m4
+│   │   │   │   ├── dup2.m4
+│   │   │   │   ├── eealloc.m4
+│   │   │   │   ├── errno_h.m4
+│   │   │   │   ├── error_h.m4
+│   │   │   │   ├── error.m4
+│   │   │   │   ├── extensions.m4
+│   │   │   │   ├── extern-inline.m4
+│   │   │   │   ├── fcntl_h.m4
+│   │   │   │   ├── fcntl-o.m4
+│   │   │   │   ├── fcntl.m4
+│   │   │   │   ├── free.m4
+│   │   │   │   ├── fstat.m4
+│   │   │   │   ├── getdtablesize.m4
+│   │   │   │   ├── getopt.m4
+│   │   │   │   ├── getprogname.m4
+│   │   │   │   ├── gnulib-cache.m4
+│   │   │   │   ├── gnulib-common.m4
+│   │   │   │   ├── gnulib-comp.m4
+│   │   │   │   ├── gnulib-tool.m4
+│   │   │   │   ├── include_next.m4
+│   │   │   │   ├── inline.m4
+│   │   │   │   ├── inttypes.m4
+│   │   │   │   ├── largefile.m4
+│   │   │   │   ├── libunistring-base.m4
+│   │   │   │   ├── limits-h.m4
+│   │   │   │   ├── locale-fr.m4
+│   │   │   │   ├── malloc.m4
+│   │   │   │   ├── malloca.m4
+│   │   │   │   ├── mode_t.m4
+│   │   │   │   ├── msvc-inval.m4
+│   │   │   │   ├── msvc-nothrow.m4
+│   │   │   │   ├── multiarch.m4
+│   │   │   │   ├── musl.m4
+│   │   │   │   ├── nocrash.m4
+│   │   │   │   ├── off_t.m4
+│   │   │   │   ├── off64_t.m4
+│   │   │   │   ├── open-cloexec.m4
+│   │   │   │   ├── open-slash.m4
+│   │   │   │   ├── open.m4
+│   │   │   │   ├── pathmax.m4
+│   │   │   │   ├── pid_t.m4
+│   │   │   │   ├── realloc.m4
+│   │   │   │   ├── ssize_t.m4
+│   │   │   │   ├── stat-time.m4
+│   │   │   │   ├── stat.m4
+│   │   │   │   ├── std-gnu11.m4
+│   │   │   │   ├── stdarg.m4
+│   │   │   │   ├── stddef_h.m4
+│   │   │   │   ├── stdint.m4
+│   │   │   │   ├── stdio_h.m4
+│   │   │   │   ├── stdlib_h.m4
+│   │   │   │   ├── strerror.m4
+│   │   │   │   ├── string_h.m4
+│   │   │   │   ├── strndup.m4
+│   │   │   │   ├── strnlen.m4
+│   │   │   │   ├── sys_cdefs_h.m4
+│   │   │   │   ├── sys_socket_h.m4
+│   │   │   │   ├── sys_stat_h.m4
+│   │   │   │   ├── sys_types_h.m4
+│   │   │   │   ├── time_h.m4
+│   │   │   │   ├── unistd_h.m4
+│   │   │   │   ├── vararrays.m4
+│   │   │   │   ├── version-etc.m4
+│   │   │   │   ├── warn-on-use.m4
+│   │   │   │   ├── wchar_h.m4
+│   │   │   │   ├── wint_t.m4
+│   │   │   │   └── zzgnulib.m4
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── malloc.c
+│   │   │   ├── malloca.c
+│   │   │   ├── malloca.h
+│   │   │   ├── msvc-inval.c
+│   │   │   ├── msvc-inval.h
+│   │   │   ├── msvc-nothrow.c
+│   │   │   ├── msvc-nothrow.h
+│   │   │   ├── open.c
+│   │   │   ├── pathmax.h
+│   │   │   ├── progname.c
+│   │   │   ├── progname.h
+│   │   │   ├── realloc.c
+│   │   │   ├── stat-time.c
+│   │   │   ├── stat-time.h
+│   │   │   ├── stat-w32.c
+│   │   │   ├── stat-w32.h
+│   │   │   ├── stat.c
+│   │   │   ├── stdarg.in.h
+│   │   │   ├── stdckdint.in.h
+│   │   │   ├── stddef.h
+│   │   │   ├── stddef.in.h
+│   │   │   ├── stdint.h
+│   │   │   ├── stdint.in.h
+│   │   │   ├── stdio-read.c
+│   │   │   ├── stdio-write.c
+│   │   │   ├── stdio.h
+│   │   │   ├── stdio.in.h
+│   │   │   ├── stdlib.h
+│   │   │   ├── stdlib.in.h
+│   │   │   ├── strerror-override.c
+│   │   │   ├── strerror-override.h
+│   │   │   ├── strerror.c
+│   │   │   ├── string.h
+│   │   │   ├── string.in.h
+│   │   │   ├── strndup.c
+│   │   │   ├── strnlen.c
+│   │   │   ├── sys
+│   │   │   │   ├── stat.h
+│   │   │   │   └── types.h
+│   │   │   ├── sys_stat.in.h
+│   │   │   ├── sys_types.in.h
+│   │   │   ├── time.h
+│   │   │   ├── time.in.h
+│   │   │   ├── unistd.c
+│   │   │   ├── unistd.h
+│   │   │   ├── unistd.in.h
+│   │   │   ├── unistr
+│   │   │   │   ├── libgnutools_la-u16-mbtoucr.lo
+│   │   │   │   ├── libgnutools_la-u16-mbtoucr.o
+│   │   │   │   ├── libgnutools_la-u16-to-u8.lo
+│   │   │   │   ├── libgnutools_la-u16-to-u8.o
+│   │   │   │   ├── libgnutools_la-u32-to-u8.lo
+│   │   │   │   ├── libgnutools_la-u32-to-u8.o
+│   │   │   │   ├── libgnutools_la-u8-uctomb-aux.lo
+│   │   │   │   ├── libgnutools_la-u8-uctomb-aux.o
+│   │   │   │   ├── libgnutools_la-u8-uctomb.lo
+│   │   │   │   ├── libgnutools_la-u8-uctomb.o
+│   │   │   │   ├── u16-mbtoucr.c
+│   │   │   │   ├── u16-to-u8.c
+│   │   │   │   ├── u32-to-u8.c
+│   │   │   │   ├── u8-uctomb-aux.c
+│   │   │   │   └── u8-uctomb.c
+│   │   │   ├── unistr.h
+│   │   │   ├── unistr.in.h
+│   │   │   ├── unitypes.h
+│   │   │   ├── unitypes.in.h
+│   │   │   ├── verify.h
+│   │   │   ├── version-etc.c
+│   │   │   ├── version-etc.h
+│   │   │   ├── warn-on-use.h
+│   │   │   ├── wchar.h
+│   │   │   ├── wchar.in.h
+│   │   │   └── xalloc-oversized.h
+│   │   ├── libbrlcheck.la
+│   │   ├── lou_allround
+│   │   ├── lou_allround.c
+│   │   ├── lou_allround.o
+│   │   ├── lou_checkhyphens
+│   │   ├── lou_checkhyphens.c
+│   │   ├── lou_checkhyphens.o
+│   │   ├── lou_checktable
+│   │   ├── lou_checktable.c
+│   │   ├── lou_checktable.o
+│   │   ├── lou_checkyaml
+│   │   ├── lou_checkyaml-lou_checkyaml.o
+│   │   ├── lou_checkyaml.c
+│   │   ├── lou_debug
+│   │   ├── lou_debug.c
+│   │   ├── lou_debug.o
+│   │   ├── lou_maketable
+│   │   ├── lou_maketable.d
+│   │   │   ├── export_chunked_words.py
+│   │   │   ├── generate_alphabet.py
+│   │   │   ├── lou_maketable
+│   │   │   ├── lou_maketable.in
+│   │   │   ├── lou_maketable.mk
+│   │   │   ├── make_suggestions.py
+│   │   │   ├── Makefile
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── submit_rows.py
+│   │   │   ├── submit_rows.sh
+│   │   │   ├── submit_rules.py
+│   │   │   ├── submit_rules.sh
+│   │   │   ├── substrings.pl
+│   │   │   ├── utils.py
+│   │   │   └── wrap_patgen.sh
+│   │   ├── lou_tableinfo
+│   │   ├── lou_tableinfo.c
+│   │   ├── lou_tableinfo.o
+│   │   ├── lou_trace
+│   │   ├── lou_trace.c
+│   │   ├── lou_trace.o
+│   │   ├── lou_translate
+│   │   ├── lou_translate.c
+│   │   ├── lou_translate.o
+│   │   ├── Makefile
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   └── windows
+│       ├── clean.bat
+│       ├── configure.mk
+│       ├── include
+│       │   ├── config.h
+│       │   ├── Makefile
+│       │   ├── Makefile.am
+│       │   └── Makefile.in
+│       ├── Makefile
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── Makefile.nmake
+│       └── utils
+│           ├── find-replace.ps1
+│           ├── Makefile
+│           ├── Makefile.am
+│           └── Makefile.in
+├── main_v5.py
+├── main.py
+├── MANIFEST.in
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── scripts
+│   └── import_all_tables.sh
+├── tables
+│   ├── afr-za-g1.ctb
+│   ├── afr-za-g2.ctb
+│   ├── akk-borger.utb
+│   ├── akk.utb
+│   ├── ancient-languages-borger.utb
+│   ├── ancient-languages-us.utb
+│   ├── ar-ar-comp8.utb
+│   ├── ar-ar-g1-core.uti
+│   ├── ar-ar-g1.utb
+│   ├── ar-ar-g2.ctb
+│   ├── ar-ar-math.uti
+│   ├── ar.tbl
+│   ├── as-in-g1.utb
+│   ├── as.tbl
+│   ├── aw-in-g1.utb
+│   ├── awa.tbl
+│   ├── ba.utb
+│   ├── be-in-g1.utb
+│   ├── bel-comp.utb
+│   ├── bel-detailed.utb
+│   ├── bel.utb
+│   ├── bengali.cti
+│   ├── bg.ctb
+│   ├── bg.dis
+│   ├── bg.tbl
+│   ├── bg.utb
+│   ├── bh.ctb
+│   ├── bh.tbl
+│   ├── bn.tbl
+│   ├── bo.ctb
+│   ├── bo.tbl
+│   ├── boxes.ctb
+│   ├── br-in-g1.utb
+│   ├── bra.tbl
+│   ├── braille-patterns.cti
+│   ├── ca-chardefs.cti
+│   ├── ca-g1.ctb
+│   ├── ca.tbl
+│   ├── chr-us-g1.ctb
+│   ├── ckb-chardefs.cti
+│   ├── ckb-g1.ctb
+│   ├── ckb-translation.cti
+│   ├── ckb.tbl
+│   ├── compress.cti
+│   ├── controlchars.cti
+│   ├── cop-eg-comp8.utb
+│   ├── cop.utb
+│   ├── corrections.cti
+│   ├── countries.cti
+│   ├── critical-apparatus.uti
+│   ├── cs-chardefs.cti
+│   ├── cs-comp8.utb
+│   ├── cs-g1.ctb
+│   ├── cs-translation.cti
+│   ├── cs.tbl
+│   ├── cuneiform-transliterated-compact.utb
+│   ├── cuneiform-transliterated.utb
+│   ├── cy-cy-g1.utb
+│   ├── cy-cy-g2.ctb
+│   ├── cy.tbl
+│   ├── da-dk-6miscChars_1993.cti
+│   ├── da-dk-6miscChars.cti
+│   ├── da-dk-8miscChars_1993.cti
+│   ├── da-dk-8miscChars.cti
+│   ├── da-dk-g08_1993.ctb
+│   ├── da-dk-g08.ctb
+│   ├── da-dk-g16_1993.ctb
+│   ├── da-dk-g16-lit_1993.ctb
+│   ├── da-dk-g16.ctb
+│   ├── da-dk-g18_1993.ctb
+│   ├── da-dk-g18.ctb
+│   ├── da-dk-g2.dic
+│   ├── da-dk-g26_1993.ctb
+│   ├── da-dk-g26-lit_1993.ctb
+│   ├── da-dk-g26.ctb
+│   ├── da-dk-g26l_1993.ctb
+│   ├── da-dk-g26l-lit_1993.ctb
+│   ├── da-dk-g28_1993.ctb
+│   ├── da-dk-g28.ctb
+│   ├── da-dk-g28l_1993.ctb
+│   ├── da-dk-octobraille_1993.dis
+│   ├── da-dk-octobraille.dis
+│   ├── de-accents-detailed.cti
+│   ├── de-accents.cti
+│   ├── de-chardefs6.cti
+│   ├── de-chardefs8.cti
+│   ├── de-chess.ctb
+│   ├── de-comp6.utb
+│   ├── de-de-comp8.ctb
+│   ├── de-de.dis
+│   ├── de-eurobrl6.dis
+│   ├── de-eurobrl6u.dis
+│   ├── de-g0-core.uti
+│   ├── de-g0-detailed.utb
+│   ├── de-g0.utb
+│   ├── de-g1-core-patterns.dic
+│   ├── de-g1-core.cti
+│   ├── de-g1-detailed.ctb
+│   ├── de-g1.ctb
+│   ├── de-g2-core-patterns.dic
+│   ├── de-g2-core.cti
+│   ├── de-g2-detailed.ctb
+│   ├── de-g2.ctb
+│   ├── devanagari.cti
+│   ├── digits6Dots.uti
+│   ├── digits6DotsPlusDot6.uti
+│   ├── digits8Dots.uti
+│   ├── dra.ctb
+│   ├── dra.tbl
+│   ├── el.ctb
+│   ├── en_CA.ctb
+│   ├── en_CA.tbl
+│   ├── en_GB.tbl
+│   ├── en_US-comp8-ext.tbl
+│   ├── en_US.tbl
+│   ├── en-chardefs.cti
+│   ├── en-chess.ctb
+│   ├── en-gb-comp8.ctb
+│   ├── en-gb-g1.utb
+│   ├── en-GB-g2.ctb
+│   ├── en-in-g1.ctb
+│   ├── en-nabcc.utb
+│   ├── en-ueb-chardefs.uti
+│   ├── en-ueb-g1.ctb
+│   ├── en-ueb-g2.ctb
+│   ├── en-ueb-math.ctb
+│   ├── en-us-brf.dis
+│   ├── en-us-comp6.ctb
+│   ├── en-us-comp8-ext.utb
+│   ├── en-us-comp8.ctb
+│   ├── en-us-compbrl.uti
+│   ├── en-us-emphasis.uti
+│   ├── en-us-g1.ctb
+│   ├── en-us-g2.ctb
+│   ├── en-us-interline.ctb
+│   ├── en-us-mathtext.ctb
+│   ├── eo-g1-x-system.ctb
+│   ├── eo-g1.ctb
+│   ├── eo.tbl
+│   ├── es-chardefs.cti
+│   ├── Es-Es-G0.utb
+│   ├── es-g1.ctb
+│   ├── es-g2.ctb
+│   ├── es-new.dis
+│   ├── es-old.dis
+│   ├── es.tbl
+│   ├── et-g0.utb
+│   ├── et.ctb
+│   ├── et.tbl
+│   ├── ethio-g1.ctb
+│   ├── eurodefs.cti
+│   ├── fa-ir-comp8.ctb
+│   ├── fa-ir-g1.utb
+│   ├── fi-fi-8dot.ctb
+│   ├── fi.utb
+│   ├── fil-g2.ctb
+│   ├── fr-bfu-comp6.utb
+│   ├── fr-bfu-comp68.cti
+│   ├── fr-bfu-comp8.utb
+│   ├── fr-bfu-g2.ctb
+│   ├── ga-g1.utb
+│   ├── ga-g2.ctb
+│   ├── gd.ctb
+│   ├── gd.tbl
+│   ├── gez.tbl
+│   ├── gon.ctb
+│   ├── gon.tbl
+│   ├── gr-pl-comp8.uti
+│   ├── grc-international-common.uti
+│   ├── grc-international-composed.uti
+│   ├── grc-international-decomposed.uti
+│   ├── grc-international-en-composed.utb
+│   ├── grc-international-en.utb
+│   ├── grc-international-es.utb
+│   ├── gu-in-g1.utb
+│   ├── gu.tbl
+│   ├── gujarati.cti
+│   ├── gurumuki.cti
+│   ├── haw-us-g1.ctb
+│   ├── hbo-cantillated-rules.uti
+│   ├── hbo-cantillated.utb
+│   ├── hbo-common-rules.uti
+│   ├── hbo-ihbc-rules.uti
+│   ├── hbo-slim-rules.uti
+│   ├── hbo-slim.utb
+│   ├── hbo.utb
+│   ├── he-common-consonants.uti
+│   ├── he-common-vowels-ihbc.uti
+│   ├── he-IL-comp8.utb
+│   ├── he-IL.utb
+│   ├── hi-in-g1.utb
+│   ├── hi.tbl
+│   ├── hr-chardefs.cti
+│   ├── hr-comp8.tbl
+│   ├── hr-comp8.utb
+│   ├── hr-digits.uti
+│   ├── hr-g1.ctb
+│   ├── hr-g1.tbl
+│   ├── hr-translation.cti
+│   ├── hu-backtranslate-correction.dis
+│   ├── hu-backtranslate-word-corrections.cti
+│   ├── hu-chardefs.cti
+│   ├── hu-exceptionwords.cti
+│   ├── hu-hu-comp8.ctb
+│   ├── hu-hu-g1_braille_input.cti
+│   ├── hu-hu-g1.ctb
+│   ├── hu-hu-g2_exceptions.cti
+│   ├── hu-hu-g2.ctb
+│   ├── hu.tbl
+│   ├── hy.ctb
+│   ├── hy.tbl
+│   ├── hyph_cs_CZ.dic
+│   ├── hyph_da_DK.dic
+│   ├── hyph_de_DE.dic
+│   ├── hyph_en_US.dic
+│   ├── hyph_eo.dic
+│   ├── hyph_es_ES.dic
+│   ├── hyph_fr_FR.dic
+│   ├── hyph_hu_HU.dic
+│   ├── hyph_it_IT.dic
+│   ├── hyph_nb_NO.dic
+│   ├── hyph_nl_NL.dic
+│   ├── hyph_nn_NO.dic
+│   ├── hyph_pl_PL.dic
+│   ├── hyph_pt_PT.dic
+│   ├── hyph_ru.dic
+│   ├── hyph_sv_SE.dic
+│   ├── IPA-unicode-range.uti
+│   ├── IPA.utb
+│   ├── is-chardefs6.cti
+│   ├── is-chardefs8.cti
+│   ├── is.ctb
+│   ├── is.tbl
+│   ├── it-it-comp6.utb
+│   ├── it-it-comp8.utb
+│   ├── it.tbl
+│   ├── iu-ca-g1.ctb
+│   ├── ja-kantenji-ucs2.utb
+│   ├── ja-kantenji.utb
+│   ├── ka-in-g1.utb
+│   ├── ka.utb
+│   ├── kannada.cti
+│   ├── kh-in-g1.utb
+│   ├── kha.tbl
+│   ├── kk.utb
+│   ├── km-g1.utb
+│   ├── kmr.tbl
+│   ├── kn.tbl
+│   ├── ko-2006-g1.ctb
+│   ├── ko-2006-g2.ctb
+│   ├── ko-2006.cti
+│   ├── ko-chars.cti
+│   ├── ko-g1-rules.cti
+│   ├── ko-g1.ctb
+│   ├── ko-g2-rules.cti
+│   ├── ko-g2.ctb
+│   ├── ko.cti
+│   ├── kok.ctb
+│   ├── kok.tbl
+│   ├── kru.ctb
+│   ├── kru.tbl
+│   ├── ks-in-g1.utb
+│   ├── latinLetterDef6Dots.uti
+│   ├── latinLetterDef8Dots.uti
+│   ├── latinLowercase.uti
+│   ├── latinUppercaseComp6.uti
+│   ├── lg-ug-g1.utb
+│   ├── litdigits6Dots.uti
+│   ├── litdigits6DotsPlusDot6.uti
+│   ├── lo-g1.utb
+│   ├── loweredDigits6Dots.uti
+│   ├── loweredDigits8Dots.uti
+│   ├── lt-6dot.utb
+│   ├── lt-8dot.utb
+│   ├── lt.ctb
+│   ├── Lv-Lv-g1.utb
+│   ├── lv.tbl
+│   ├── Makefile
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── maketablelist.sh
+│   ├── malayalam.cti
+│   ├── mao-nz-g1.ctb
+│   ├── marburg_single_cell_defs.cti
+│   ├── marburg_unicode_defs.cti
+│   ├── ml-in-g1.utb
+│   ├── ml.tbl
+│   ├── mn-in-g1.utb
+│   ├── mn-MN-common.cti
+│   ├── mn-MN-g1.utb
+│   ├── mn-MN-g2.ctb
+│   ├── mni.tbl
+│   ├── mr-in-g1.utb
+│   ├── mr.tbl
+│   ├── ms-my-g2.ctb
+│   ├── mt.ctb
+│   ├── mt.tbl
+│   ├── mun.ctb
+│   ├── mun.tbl
+│   ├── mwr.ctb
+│   ├── mwr.tbl
+│   ├── my-g1.utb
+│   ├── my-g2.ctb
+│   ├── ne.ctb
+│   ├── ne.tbl
+│   ├── nemethdefs.cti
+│   ├── nl-BE.dis
+│   ├── nl-chardefs.uti
+│   ├── nl-chardefs.uti.in
+│   ├── nl-comp8.utb
+│   ├── nl-NL-g0.utb
+│   ├── nl-NL-g0.utb.in
+│   ├── nl-print.dis
+│   ├── nl-unicode.dis
+│   ├── no-no-8dot-fallback-6dot-g0.utb
+│   ├── no-no-8dot.utb
+│   ├── no-no-braillo-047-01.dis
+│   ├── no-no-chardefs6.uti
+│   ├── no-no-comp8.ctb
+│   ├── no-no-cyrillic6dot.uti
+│   ├── no-no-g0.utb
+│   ├── no-no-g1.ctb
+│   ├── no-no-g2.ctb
+│   ├── no-no-g3.ctb
+│   ├── no-no-generic.ctb
+│   ├── no-no-generic.dis
+│   ├── no-no-latinLetterDef6Dots_diacritics.uti
+│   ├── no-no.dis
+│   ├── np-in-g1.utb
+│   ├── nso-za-g1.utb
+│   ├── nso-za-g2.ctb
+│   ├── ny-mw.utb
+│   ├── or-in-g1.utb
+│   ├── or.tbl
+│   ├── oriya.cti
+│   ├── pa.tbl
+│   ├── pi.ctb
+│   ├── pi.tbl
+│   ├── pl-pl-comp8.ctb
+│   ├── Pl-Pl-g1.utb
+│   ├── pl.tbl
+│   ├── printables.cti
+│   ├── pt-comp6.utb
+│   ├── pt-pt-comp8.ctb
+│   ├── pt-pt-g1.utb
+│   ├── pt-pt-g2.ctb
+│   ├── pt.tbl
+│   ├── pu-in-g1.utb
+│   ├── quotation-marks.uti
+│   ├── README
+│   ├── ro-g0.utb
+│   ├── ro.ctb
+│   ├── ro.tbl
+│   ├── ru-brf.dis
+│   ├── ru-comp6.utb
+│   ├── ru-comp8.utb
+│   ├── ru-letters.dis
+│   ├── ru-litbrl-detailed.utb
+│   ├── ru-litbrl.ctb
+│   ├── ru-ru-g1.ctb
+│   ├── ru-unicode.dis
+│   ├── rw-rw-g1.utb
+│   ├── sa-in-g1.utb
+│   ├── sa.tbl
+│   ├── sah.utb
+│   ├── sd.tbl
+│   ├── se-se.ctb
+│   ├── se-se.dis
+│   ├── si-in-g1.utb
+│   ├── sin.cti
+│   ├── sin.utb
+│   ├── sk-g1.ctb
+│   ├── sk-sk-g1.utb
+│   ├── sk-sk.utb
+│   ├── sl-si-comp8.ctb
+│   ├── sl-si-g1.utb
+│   ├── sl.tbl
+│   ├── sot-za-g1.ctb
+│   ├── sot-za-g2.ctb
+│   ├── spaces.uti
+│   ├── sr-common.cti
+│   ├── sr-Cyrl.ctb
+│   ├── sr-cyrletters.cti
+│   ├── sr-g1.ctb
+│   ├── sr-latletters.cti
+│   ├── sv-1989.ctb
+│   ├── sv-1996.ctb
+│   ├── sv-g0.utb
+│   ├── sv-g1.ctb
+│   ├── sv-g2.ctb
+│   ├── sw-ke-g1-2.ctb
+│   ├── sw-ke-g1-3.ctb
+│   ├── sw-ke-g1-4.ctb
+│   ├── sw-ke-g1-5.ctb
+│   ├── sw-ke-g1.utb
+│   ├── sw-ke-g2.ctb
+│   ├── syc.utb
+│   ├── ta-ta-g1.ctb
+│   ├── ta.ctb
+│   ├── ta.tbl
+│   ├── tamil.cti
+│   ├── te-in-g1.utb
+│   ├── te.tbl
+│   ├── telugu.cti
+│   ├── text_nabcc.dis
+│   ├── th-comp8-backward.utb
+│   ├── th-g0.utb
+│   ├── th-g1.utb
+│   ├── th-g1.uti
+│   ├── th-g2.ctb
+│   ├── tr-g1.ctb
+│   ├── tr-g2.ctb
+│   ├── tr-g2.tbl
+│   ├── tr.ctb
+│   ├── tr.tbl
+│   ├── tsn-za-g1.ctb
+│   ├── tsn-za-g2.ctb
+│   ├── tt.utb
+│   ├── uga.utb
+│   ├── uk-comp.utb
+│   ├── uk-detailed.utb
+│   ├── uk.utb
+│   ├── ukchardefs.cti
+│   ├── ukmaths_single_cell_defs.cti
+│   ├── ukmaths_unicode_defs.cti
+│   ├── uni-text.dis
+│   ├── unicode-braille.utb
+│   ├── unicode-without-blank.dis
+│   ├── unicode.dis
+│   ├── ur-pk-g1.utb
+│   ├── ur-pk-g2.ctb
+│   ├── us-table.dis
+│   ├── uz-g1.utb
+│   ├── ve-za-g1.utb
+│   ├── ve-za-g2.ctb
+│   ├── vi-cb8.utb
+│   ├── vi-charsdef.uti
+│   ├── vi-lettersdef.uti
+│   ├── vi-puncsdef.uti
+│   ├── vi-saigon-g1.ctb
+│   ├── vi-vn-g0.utb
+│   ├── vi-vn-g1.ctb
+│   ├── vi-vn-g2.ctb
+│   ├── wiskunde-chardefs.cti
+│   ├── wordcx.dis
+│   ├── xh-za-g1.utb
+│   ├── xh-za-g2.ctb
+│   ├── yi.utb
+│   ├── zh_CHN.tbl
+│   ├── zh-chn.ctb
+│   ├── zh-hk.ctb
+│   ├── zh-tw.ctb
+│   ├── zhcn-cbs.ctb
+│   ├── zhcn-g1.ctb
+│   ├── zhcn-g2.ctb
+│   ├── zu-za-g1.utb
+│   └── zu-za-g2.ctb
+├── test_tree.txt
+├── tests
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── conftest.cpython-311-pytest-8.4.0.pyc
+│   │   ├── test_translator_v2.cpython-311-pytest-8.4.0.pyc
+│   │   ├── test_translator_v5.cpython-311-pytest-8.4.0.pyc
+│   │   └── test_translator.cpython-311-pytest-8.4.0.pyc
+│   ├── conftest.py
+│   ├── logs
+│   │   └── test_results.log
+│   ├── test_data
+│   ├── test_translator_v2.py
+│   ├── test_translator_v5.py
+│   ├── test_translator.py
+│   └── test.py
+└── translator.py
+
+63 directories, 1795 files

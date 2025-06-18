@@ -5,7 +5,7 @@ V5 엔진을 기본으로 공개합니다.
 """
 __version__ = "0.5.0"
 
-# 【수정】 translator_v5 모듈에서 이름이 변경된 BrailleTranslator를 가져옵니다.
+# 【수정】 translator_v5 모듈에서 이름이 변경된 클래스들을 가져옵니다.
 from .translator_v5 import (
     BrailleTranslator,
     InputFormatDetector,
