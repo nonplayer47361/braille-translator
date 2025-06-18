@@ -15,7 +15,7 @@ import sys
 import json
 import cv2
 
-from braille_translator.translator import BrailleTranslator
+from braille_translator.translator_v1 import BrailleTranslator
 
 def cmd_to_braille(args, tr: BrailleTranslator):
     text = args.text or sys.stdin.read().rstrip("\n")
