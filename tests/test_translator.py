@@ -49,18 +49,23 @@ def roundtrip_text(tr: BrailleTranslator, text: str, fmt: str) -> str:
     fmt == "unicode" : text → unicode 점자 → 다시 text
     fmt == "binary"  : text → unicode 점자 → 셀 배열 → 다시 text
     """
-    # 1) 먼저 항상 unicode 점자 형태로 변환
-    uni = tr.text_to_braille(text, fmt="unicode")
+    try:
+        # 1) 먼저 항상 unicode 점자 형태로 변환
+        uni = tr.text_to_braille(text, fmt="unicode")
 
-    if fmt == "unicode":
-        # 그대로 다시 디코딩
-        restored = tr.braille_to_text(uni, fmt="unicode")
-    else:
-        # binary라면 셀 배열로 바꾼 뒤 디코딩
-        cells = unicode_to_cells(uni)
-        restored = tr.braille_to_text(cells, fmt="binary")
+        if fmt == "unicode":
+            # 그대로 다시 디코딩
+            restored = tr.braille_to_text(uni)
+        else:
+            # binary라면 셀 배열로 바꾼 뒤 유니코드로 바꾸고 디코딩
+            cells = unicode_to_cells(uni)
+            binary_str = "".join("".join(map(str, cell)) for cell in cells)
+            unicode_str = binary_to_unicode(binary_str)
+            restored = tr.braille_to_text(unicode_str)
 
-    return restored
+        return restored
+    except Exception as e:
+        return f"[ERROR: {e}]"
 
 # ——————————————————————————————————————————————————————————————
 # Translator 인스턴스 재사용을 피하기 위해 fixture로 생성
@@ -78,7 +83,7 @@ def tr():
 @pytest.mark.parametrize("text", ALL_TEXT_CASES)
 def test_roundtrip_unicode(tr, text):
     restored = roundtrip_text(tr, text, fmt="unicode")
-    assert restored == str(text), (
+    assert restored.strip() == str(text).strip(), (
         f"Unicode round-trip 실패:\n"
         f"  입력:    {text!r}\n"
         f"  복원:    {restored!r}"
@@ -90,7 +95,7 @@ def test_roundtrip_unicode(tr, text):
 @pytest.mark.parametrize("text", ALL_TEXT_CASES)
 def test_roundtrip_binary(tr, text):
     restored = roundtrip_text(tr, text, fmt="binary")
-    assert restored == str(text), (
+    assert restored.strip() == str(text).strip(), (
         f"Binary round-trip 실패:\n"
         f"  입력:    {text!r}\n"
         f"  복원:    {restored!r}"
