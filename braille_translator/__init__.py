@@ -1,62 +1,57 @@
 # -*- coding: utf-8 -*-
-
-"""
-braille-translator 패키지
-이 파일을 통해 외부에서 패키지의 주요 클래스에 쉽게 접근할 수 있습니다.
-V5 엔진을 기본으로 공개합니다.
-"""
+import json
+import os
+from pathlib import Path
+import importlib
 
 # 패키지 버전
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 
-# v5 모듈에서 필요한 모든 클래스와 타입을 가져옵니다.
-from .translator_v5 import (
-    SuperBrailleTranslator,
-    InputFormatDetector,
-    LanguageDetector,
-    LanguageType,
-    ContractionLevel,
-    UnifiedTranslationResult,
-    HAS_IMAGE_SUPPORT
-)
+# --- 설정 파일 로드 및 동적 Import ---
+try:
+    config_path = Path(__file__).parent / "config.json"
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = json.load(f)
+    
+    ACTIVE_VERSION = config.get("active_translator_version", "v5") # 기본값 v5
+    version_info = config["versions"][ACTIVE_VERSION]
 
-# 이 패키지를 import 했을 때, 외부로 공개할 API 목록을 정의합니다.
+    module_name = f".{version_info['module']}"
+    class_name = version_info['class']
+    
+    translator_module = importlib.import_module(module_name, package=__name__)
+    BrailleTranslator = getattr(translator_module, class_name)
+
+except (FileNotFoundError, KeyError, ImportError) as e:
+    raise ImportError(
+        f"활성 버전 '{ACTIVE_VERSION}'을 불러오는 데 실패했습니다. "
+        f"config.json 설정이나 모듈 파일('{version_info.get('module')}.py')이 올바른지 확인해주세요. 오류: {e}"
+    )
+
+# --- 공개 API 설정 ---
 __all__ = [
-    "SuperBrailleTranslator",
-    "InputFormatDetector",
-    "LanguageDetector",
-    "LanguageType",
-    "ContractionLevel",
-    "UnifiedTranslationResult",
-    "HAS_IMAGE_SUPPORT"
+    "BrailleTranslator",  # 현재 활성화된 버전의 번역기 클래스
 ]
 
-# 이 패키지를 import 했을 때, 외부로 공개할 API 목록을 정의합니다.
-__all__ = [
-    "SuperBrailleTranslator",
-    "InputFormatDetector",
-    "LanguageDetector",
-    "LanguageType",
-    "ContractionLevel",
-    "UnifiedTranslationResult",
-    "HAS_IMAGE_SUPPORT"
-]
-
-# # 패키지 버전
-# __version__ = "0.1.0"
-
-# # 실제로 존재하는 것만 import
-# from .translator_v1 import (
-#     BrailleTranslator,
-#     unicode_to_dots,
-#     unicode_to_binary,
-#     binary_to_unicode,
-# )
-
-# # 공개 API
-# __all__ = [
-#     "BrailleTranslator",
-#     "unicode_to_dots",
-#     "unicode_to_binary",
-#     "binary_to_unicode",
-# ]
+# V5 버전이 활성화된 경우에만 V5 전용 클래스들을 공개합니다.
+if ACTIVE_VERSION == 'v5':
+    try:
+        from .translator_v5 import (
+            InputFormatDetector,
+            LanguageDetector,
+            LanguageType,
+            ContractionLevel,
+            UnifiedTranslationResult,
+            HAS_IMAGE_SUPPORT
+        )
+        __all__.extend([
+            "InputFormatDetector",
+            "LanguageDetector",
+            "LanguageType",
+            "ContractionLevel",
+            "UnifiedTranslationResult",
+            "HAS_IMAGE_SUPPORT"
+        ])
+    except ImportError:
+        # translator_v5 파일이나 내부 클래스가 없을 경우를 대비
+        pass

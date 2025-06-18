@@ -1,0 +1,13 @@
+{
+  "active_translator_version": "v5",
+  "versions": {
+    "v1": {
+      "module": "translator_v1",
+      "class": "BrailleTranslator"
+    },
+    "v5": {
+      "module": "translator_v5",
+      "class": "SuperBrailleTranslator"
+    }
+  }
+}

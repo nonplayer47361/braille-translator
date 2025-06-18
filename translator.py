@@ -32,7 +32,7 @@ import datetime
 
 import cv2
 
-from braille_translator.translator import BrailleTranslator
+from braille_translator.translator_v1 import BrailleTranslator
 
 def unicode_to_dots(uni: str) -> str:
     """

@@ -1,7 +1,7 @@
 # File: tests/test_translator.py
 
 import pytest
-from braille_translator.translator import (
+from braille_translator.translator_v1 import (
     BrailleTranslator,
     unicode_to_binary,
     binary_to_unicode,
