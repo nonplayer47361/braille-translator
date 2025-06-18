@@ -23,6 +23,7 @@ def translator():
     """
     모든 테스트 세션에서 단 한 번만 생성되어 공유되는
     BrailleTranslator 인스턴스를 반환합니다.
+    (config.json에 따라 V1 또는 V5 엔진이 될 수 있습니다.)
     """
     # table_dir 인자를 전달하여 louis가 테이블 파일을 찾도록 경로를 지정합니다.
     return BrailleTranslator(table_dir="tables")
